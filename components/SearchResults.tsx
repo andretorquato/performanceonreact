@@ -9,6 +9,10 @@ interface SearchResultsProps {
 }
 
 export function SearchResults({ results }: SearchResultsProps) {
+  const total = results.reduce((sub, current) =>{
+    
+    return sub;
+  }, 0);
   return (
     <div>
       {results.map((product) => {

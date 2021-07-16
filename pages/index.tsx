@@ -7,11 +7,9 @@ export default function Home() {
 
   async function handleSearch(event: FormEvent) {
     event.preventDefault();
-
     if (!search.trim()) {
       return;
     }
-
     const response = await fetch(`http://localhost:3333/products?q=${search}`);
     const data = await response.json();
     setResults(data);
